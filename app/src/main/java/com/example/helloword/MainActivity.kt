@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
@@ -70,27 +72,36 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                             fontSize = 28.sp,
                             fontWeight = FontWeight.Bold,
                         )
+                        Text(
+                            text = "Mago Supremo",
+                            color = Color.Gray,
+                            fontSize = 16.sp,
+                        )
+                        Spacer(modifier = Modifier.padding(bottom = 32.dp))
                         Row(
-                            horizontalArrangement = Arrangement.SpaceBetween
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            modifier = Modifier.fillMaxWidth(),
                         ) {
                             Text(
                                 text = "LVL 99",
-                                modifier = Modifier
-                                    .padding(24.dp),
                                 color = Color.Black,
                                 fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold
+                                fontWeight = FontWeight.Bold,
                             )
                             Text(
                                 text = "HP 5000",
-                                modifier = Modifier
-                                    .padding(24.dp),
                                 color = Color.Red,
                                 fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold
+                                fontWeight = FontWeight.Bold,
 
                             )
                         }
+                        Spacer(modifier = Modifier.padding(top = 24.dp))
+                        Text(
+                            text = "Mestre no código limpo e caçador de bugs.",
+                            fontSize = 14.sp,
+                            textAlign = TextAlign.Center,
+                        )
                     }
                 }
 
