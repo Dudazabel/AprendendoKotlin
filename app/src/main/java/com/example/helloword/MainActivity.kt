@@ -36,11 +36,65 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            HelloWordTheme {
-                Surface (
-                    color = Color.Blue,
-                    modifier = Modifier.size(150.dp)
-                ){ }
+            Surface (
+                color = Color(0xFF2B2D42),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .safeDrawingPadding()
+            ){
+                Column (
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ){
+                    Surface (
+                        color = Color(0xFFEDF2F4),
+                        modifier = Modifier
+                            .size(320.dp),
+                        shape = RoundedCornerShape(16.dp),
+                    ){
+                        Column(modifier = Modifier.padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text(
+                                text = "Guerreiro Kotlin",
+                                color = Color.Black,
+                                fontSize = 28.sp,
+                                fontWeight = FontWeight.Bold,
+                            )
+                            Text(
+                                text = "Mago Supremo",
+                                color = Color.Gray,
+                                fontSize = 16.sp,
+                            )
+                            Spacer(modifier = Modifier.padding(bottom = 32.dp))
+                            Row(
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                Text(
+                                    text = "LVL 99",
+                                    color = Color.Black,
+                                    fontSize = 18.sp,
+                                    fontWeight = FontWeight.Bold,
+                                )
+                                Text(
+                                    text = "HP 5000",
+                                    color = Color.Red,
+                                    fontSize = 18.sp,
+                                    fontWeight = FontWeight.Bold,
+
+                                    )
+                            }
+                            Spacer(modifier = Modifier.padding(top = 24.dp))
+                            Text(
+                                text = "Mestre no código limpo e caçador de bugs.",
+                                fontSize = 14.sp,
+                                textAlign = TextAlign.Center,
+                            )
+                        }
+                    }
+
+
+                }
             }
         }
     }
@@ -48,66 +102,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-        Surface (
-            color = Color(0xFF2B2D42),
-            modifier = Modifier
-                .fillMaxSize()
-                .safeDrawingPadding()
-        ){
-            Column (
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ){
-                Surface (
-                    color = Color(0xFFEDF2F4),
-                    modifier = Modifier
-                        .size(320.dp),
-                    shape = RoundedCornerShape(16.dp),
-                ){
-                    Column(modifier = Modifier.padding(24.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(
-                            text = "Guerreiro Kotlin",
-                            color = Color.Black,
-                            fontSize = 28.sp,
-                            fontWeight = FontWeight.Bold,
-                        )
-                        Text(
-                            text = "Mago Supremo",
-                            color = Color.Gray,
-                            fontSize = 16.sp,
-                        )
-                        Spacer(modifier = Modifier.padding(bottom = 32.dp))
-                        Row(
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Text(
-                                text = "LVL 99",
-                                color = Color.Black,
-                                fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold,
-                            )
-                            Text(
-                                text = "HP 5000",
-                                color = Color.Red,
-                                fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold,
 
-                            )
-                        }
-                        Spacer(modifier = Modifier.padding(top = 24.dp))
-                        Text(
-                            text = "Mestre no código limpo e caçador de bugs.",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Center,
-                        )
-                    }
-                }
-
-
-            }
-        }
 }
 
 
